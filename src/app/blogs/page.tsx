@@ -50,8 +50,8 @@ export default function Blog() {
       <h1 className=' text-2xl font-bold pl-5'>Blogs :-</h1>
         {BlogData.map((post) => (
            <>
-          <div key={post.id} >
-          <div className="flex mt-4 w-full items-start gap-2 md:ga-5 border-2 border-l-rose-700 border-r-rose-700 p-2 md:p-5">
+          <div key={post.id}
+           className="flex mt-4 w-full items-start gap-2 md:ga-5 border-2 border-l-rose-700 border-r-rose-700 p-2 md:p-5">
             <div className='flex flex-col justify-between'>
             <Image src={post.image} alt={post.id} width={100} height={100} className='w-[150px] h-[150px] rounded-md ' />
             <div className=' flex flex-col md:hidden pt-2 md:pt-10'>
@@ -77,7 +77,7 @@ export default function Blog() {
 
             </div>
           </div>
-          </div>
+          
           </>
         ))}
       
