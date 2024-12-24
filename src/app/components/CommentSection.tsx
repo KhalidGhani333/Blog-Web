@@ -16,13 +16,14 @@ export default function Comment() {
   return (
     <div className="flex flex-col items-center md:items-start">
       <div className="p-6 m-6 w-full sm:w-[450px] bg-gray-200 shadow-lg rounded-lg">
-        <div className="flex gap-2 md:gap-5 mb-4 items-center">
+        <div className="flex md:flex-row flex-col-reverse gap-5 mb-4 items-center">
           {/* Likes/Dislikes */}
           <div className="flex items-center gap-2 text-xl">
             <BiSolidLike className="text-green-500" /> 211
             <BiSolidDislike className="text-red-500" /> 04
           </div>
 
+           <div className="flex gap-3 items-center">
           {/* Input Field */}
           <input
             type="text"
@@ -37,9 +38,11 @@ export default function Comment() {
             className="text-2xl text-blue-500 hover:text-blue-700 transition-all">
             <IoSend />
           </button>
+          </div>
+
         </div>
         
-      </div>
+       </div>
 
        {/* Display Text */}
       {displayText && (
